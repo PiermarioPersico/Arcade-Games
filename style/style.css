@@ -1,0 +1,44 @@
+*{
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Press Start 2P';
+  color: white;
+}
+header{
+  text-align: center;
+  font-size: 25px;
+  margin-top: 20px;
+  margin-left: 20px;
+  line-height: 80px;
+  text-decoration: underline;
+  text-decoration-color: red;
+  background-color: #2271b3;
+  border-radius: 20px;
+  width: 80%;
+  margin: auto;
+  margin-top: 5%;
+}
+main{
+  text-align: center;
+  background-color: #2271b3;
+  padding: 20px;
+  border-radius: 20px;
+  width: 80%;
+  margin: auto;
+  margin-top: 10%;
+
+}
+li {
+  list-style-type: none;
+  margin: 35px;
+}
+li a{
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+li a:hover{
+  color: red;
+  text-decoration: underline;
+
+}
