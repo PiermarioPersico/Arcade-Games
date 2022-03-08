@@ -2,32 +2,44 @@
   --cell-size: 180px;
   --cell-gutter:20px;
 }
-
 *{
   margin: 0;
   box-sizing: border-box;
   font-family: 'Press Start 2P';
   color: white;
 }
+body{
+  background-image: url("../common/arcadewall.jpg");
+  background-size: contain;
+}
 header{
-  text-align: center;
-  font-size: 25px;
-  margin-top: 20px;
-  margin-left: 20px;
-  line-height: 80px;
-  text-decoration: underline;
-  text-decoration-color: red;
-  background-color: #2271b3;
+  margin: 50px auto auto auto;
+  background-color:rgba(34, 113, 179, 0.8);
   border-radius: 20px;
   width: 80%;
-  margin: auto;
-  margin-top: 5%;
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+#logo{
+  border-radius: 20px;
+  height: 200px;
+}
+header a{
+  line-height: 200px;
+  background-color: black;
+  padding: 20px;
+  border-radius: 20px;
 }
 header a:hover{
   color:red;
 }
-header h2{
-  color: black;
+
+header h1{
+  color: red;
+  font-size: 70px;
+  line-height: 200px;
+
 }
 main{
   text-align: center;
@@ -37,12 +49,6 @@ main{
   width: 80%;
   margin: auto;
   margin-top: 5%;
-}
-main h1{
-  color: red;
-  font-size: 70px;
-  border-bottom: 4px solid red;
-  padding: 10px;
 }
 
 main p{
@@ -68,6 +74,7 @@ padding: 15px;
   margin-top: 30px;
   width: 90%;
   border: 2px solid white;
+  border-radius: 20px;
 }
 .game-area{
   position: relative;
@@ -75,6 +82,8 @@ padding: 15px;
 .game-data h2{
   font-size: 50px;
   margin-bottom: 15px;
+  text-decoration: underline;
+  text-decoration-color: black;
 }
 .game-data p{
   font-size: 30px;

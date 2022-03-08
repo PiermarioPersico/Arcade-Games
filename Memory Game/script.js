@@ -5,8 +5,16 @@ const cards = ['alien','bug','duck','rocket','spaceship','tiktak'];
 
 // utilizziamo lo SPREAD per unire e moltiplicare i vari array
 const deck = [...cards, ...cards];
-console.table(deck)
 
+
+// sort modifica l'ordine degli elementi dentro l'arrey se il numero è positivo o negativo
+deck.sort(function(){
+  return 0.5 - Math.random();
+});
+// Math.random restituisce un numero casuale tra 0 e 1
+
+
+console.table(deck)
 
 for(let i = 0; i < deck.length; i++){
 
