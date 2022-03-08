@@ -10,13 +10,16 @@ header{
   margin-top: 20px;
   margin-left: 20px;
   line-height: 80px;
-  text-decoration: underline;
-  text-decoration-color: red;
   background-color: #2271b3;
   border-radius: 20px;
   width: 80%;
   margin: auto;
   margin-top: 5%;
+  padding: 20px;
+}
+
+header h2{
+  color: black;
 }
 main{
   text-align: center;
@@ -30,6 +33,7 @@ main{
 
 main h1{
   font-size: 50px;
+  color: black;
 }
 li {
   list-style-type: none;
