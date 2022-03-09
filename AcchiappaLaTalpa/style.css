@@ -1,0 +1,132 @@
+:root{
+  --cell-size: 180px;
+}
+
+*{
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Press Start 2P';
+  color: white;
+}
+header{
+  margin: 50px auto auto auto;
+  background-color:rgba(34, 113, 179, 0.8);
+  border-radius: 20px;
+  width: 80%;
+  padding: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+#logo{
+  border-radius: 20px;
+  height: 200px;
+}
+header a{
+  line-height: 200px;
+  background-color: black;
+  padding: 20px;
+  border-radius: 20px;
+  text-decoration: none;
+}
+header a:hover{
+  color:black;
+  background-color: white;
+}
+
+header h1{
+  color: red;
+  font-size: 40px;
+  line-height: 200px;
+
+}
+main{
+  text-align: center;
+  background-color: #2271b3;
+  padding: 20px;
+  border-radius: 20px;
+  width: 80%;
+  margin: auto;
+  margin-top: 5%;
+}
+
+main p{
+
+padding: 15px;
+}
+
+.board{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+/* ZONA DATI */
+.game-data,
+.game-area{
+  padding: 20px;
+}
+
+.game-data{
+  margin-top: 30px;
+  width: 90%;
+  border: 2px solid white;
+  border-radius: 20px;
+}
+.game-area{
+  position: relative;
+}
+.game-data h2{
+  font-size: 50px;
+  margin-bottom: 15px;
+  text-decoration: underline;
+  text-decoration-color: black;
+}
+.board h3{
+  border: 2px solid white;
+  margin-top: 30px;
+  padding: 30px;
+  border-radius: 10px;
+}
+.game-data p{
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+
+/* GRIGLIA GIOCO */
+
+
+/* ALERT */
+
+.game-alert{
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 50px;
+}
+.game-alert-message{
+  background-color: rgba(0, 0, 255, 0.8);
+  border: 4px solid white;
+  padding: 20px;
+}
+
+.game-alert-regame{
+  font-size: 20px;
+  margin: 20px 20px;
+}
+.game-alert-regame a{
+  display: block;
+  border: 2px solid white;
+  padding: 20px;
+  text-decoration: none;
+}
