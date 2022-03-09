@@ -26,9 +26,11 @@ header a{
   background-color: black;
   padding: 20px;
   border-radius: 20px;
+  text-decoration: none;
 }
 header a:hover{
-  color:red;
+  color:black;
+  background-color: white;
 }
 
 header h1{
