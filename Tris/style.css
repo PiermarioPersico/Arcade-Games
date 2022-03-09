@@ -104,15 +104,18 @@ padding: 15px;
   flex-direction: row;
   flex-wrap: wrap;
 
-  background-color: black;
+  background-image: linear-gradient(319deg, #bbff99 0%, #ffec99 37%, #ff9999 100%);
+
 }
+
 .cell{
   height: var(--cell-size);
   width:var(--cell-size);
   cursor: pointer;
   background-color: #2271b3;
 
-  font-size: 100px;
+  font-size: 150px;
+  font-family: 'Indie Flower';
   display: flex;
   align-items: center;
   justify-content: center;
@@ -139,6 +142,7 @@ padding: 15px;
   background-color: rgba(0, 0, 255, 0.8);
   border: 4px solid white;
   padding: 20px;
+  border-radius: 20px;
 }
 
 .game-alert-regame{
@@ -150,4 +154,9 @@ padding: 15px;
   border: 2px solid white;
   padding: 20px;
   text-decoration: none;
+  width: 400px;
+  margin:auto;
+}
+.game-alert-regame a:hover{
+  color: black;
 }

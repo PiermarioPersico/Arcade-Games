@@ -8,6 +8,10 @@
   font-family: 'Press Start 2P';
   color: white;
 }
+body{
+  background-image: url("../common/arcadewall.jpg");
+  background-size: contain;
+}
 header{
   margin: 50px auto auto auto;
   background-color:rgba(34, 113, 179, 0.8);
@@ -170,4 +174,9 @@ padding: 15px;
   border: 2px solid white;
   padding: 20px;
   text-decoration: none;
+  width: 400px;
+  margin:auto;
+}
+.game-alert-regame a:hover{
+  color: black;
 }

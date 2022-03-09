@@ -19,7 +19,7 @@ for(let i = 0 ; i < cells.length ; i++){
     turn++;
     let sign;
     if(turn % 2 === 0){
-      sign = 'O'
+      sign ='O'
     }else{
       sign ='X'
     }
