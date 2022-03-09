@@ -58,9 +58,9 @@ function checkForMatch(){
 
   if(card1Name === card2Name){
    console.log('hai fatto match!');
-   checkForWin();
    errors++;
    errorCounter.innerText = errors;
+   checkForWin();
  }else{
    setTimeout(function(){
      card1.classList.remove(card1Name, 'flipped');
