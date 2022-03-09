@@ -1,5 +1,6 @@
 // queruSelector individua tramite l'id css
 const grid = document.querySelector('#grid');
+const errorCounter = document.querySelector('#error')
 
 const cards = ['alien','bug','duck','rocket','spaceship','tiktac'];
 
@@ -7,6 +8,8 @@ const cards = ['alien','bug','duck','rocket','spaceship','tiktac'];
 const deck = [...cards, ...cards];
 
 let pick = [];
+
+let errors = 0;
 
 
 // sort modifica l'ordine degli elementi dentro l'arrey se il numero è positivo o negativo
@@ -28,6 +31,8 @@ for(let i = 0; i < deck.length; i++){
 
   grid.appendChild(card)
 }
+
+errorCounter.innerText = errors;
 
 function flipCard(event){
   const card = event.target;
@@ -58,6 +63,8 @@ function checkForMatch(){
    setTimeout(function(){
      card1.classList.remove(card1Name, 'flipped');
      card2.classList.remove(card2Name, 'flipped');
+     errors++;
+     errorCounter.innerText = errors;
 
    }, 500);
 
@@ -72,7 +79,7 @@ function checkForWin(){
   const flippedCards = document.querySelectorAll('.flipped');
   if(flippedCards.length === deck.length){
     console.log('hai vinto!');
-    showAlert('Hai Vinto!');
+    showAlert(`Hai vinto in ${errors} Mosse!`);
   }
 
 }
