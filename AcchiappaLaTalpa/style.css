@@ -118,7 +118,7 @@ position: relative;
   padding: 20px;
   font-size: 30px;
   line-height: 50px;
-  margin-top: 20px;
+  margin: 20px auto;
   height: 150px;
   border-radius: 20px;
   background-size: contain;
@@ -171,4 +171,19 @@ position: relative;
 }
 .game-alert-regame a:hover{
   color: black;
+}
+
+
+
+@media only screen and (min-width:1200px) {
+
+  .game-area{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  }
+
+  .scores{
+    margin: 20px;
+  }
 }
