@@ -48,6 +48,14 @@ for(let i = 0; i < cells.length; i++){
       score++;
       scoreDisplay.innerText = score;
       console.log(score);
+      cell.classList.remove('bug');
+      cell.classList.add('splat');
+
+      setTimeout(function(){
+//puliamo la cella dallo splat
+       cell.classList.remove('splat');
+
+      },200)
     }
   })
 }
