@@ -1,12 +1,16 @@
 :root{
   --cell-size: 180px;
+  --cell-gutter:20px;
 }
-
 *{
   margin: 0;
   box-sizing: border-box;
   font-family: 'Press Start 2P';
   color: white;
+}
+body{
+  background-image: url("../common/arcadewall.jpg");
+  background-size: contain;
 }
 header{
   margin: 50px auto auto auto;
@@ -35,7 +39,7 @@ header a:hover{
 
 header h1{
   color: red;
-  font-size: 40px;
+  font-size: 70px;
   line-height: 200px;
 
 }
@@ -83,12 +87,6 @@ padding: 15px;
   text-decoration: underline;
   text-decoration-color: black;
 }
-.board h3{
-  border: 2px solid white;
-  margin-top: 30px;
-  padding: 30px;
-  border-radius: 10px;
-}
 .game-data p{
   font-size: 30px;
   margin-bottom: 15px;
@@ -96,8 +94,46 @@ padding: 15px;
 
 
 /* GRIGLIA GIOCO */
+#grid{
+  width: calc((var(--cell-size) + var(--cell-gutter))*3);
+  height: calc((var(--cell-size) + var(--cell-gutter))*3);
 
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: space-between;
+  justify-content: space-between;
+}
 
+.cell{
+  height: var(--cell-size);
+  width:var(--cell-size);
+  cursor: pointer;
+  background-color: white;
+
+}
+
+.scores{
+  border: 2px solid white;
+  padding: 20px;
+  font-size: 30px;
+  line-height: 50px;
+  text-align: right;
+  margin-top: 20px;
+  border-radius: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* ACCHIAPPA LA TALPA */
+.bug{
+  background-image: url('bug.png');
+}
+
+.splat{
+  background-image: url('bug-splat.png');
+}
 /* ALERT */
 
 .game-alert{
@@ -118,6 +154,7 @@ padding: 15px;
   background-color: rgba(0, 0, 255, 0.8);
   border: 4px solid white;
   padding: 20px;
+  border-radius: 20px;
 }
 
 .game-alert-regame{
@@ -129,4 +166,9 @@ padding: 15px;
   border: 2px solid white;
   padding: 20px;
   text-decoration: none;
+  width: 400px;
+  margin:auto;
+}
+.game-alert-regame a:hover{
+  color: black;
 }
