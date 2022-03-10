@@ -7,7 +7,7 @@ scoreDisplay.innerText = score;
 
 // inseriamo il tempo iniziale
 const timerDisplay = document.querySelector('#timer-display');
-let timeLeft = 30;
+let timeLeft = 5;
 timerDisplay.innerText = timeLeft;
 
 
@@ -60,11 +60,24 @@ for(let i = 0; i < cells.length; i++){
   })
 }
 
+//conto alla rovescia
+const timer = setInterval(countDown, 1000)
 
-const timer = setInterval(function(){
+function countDown(){
   timeLeft--;
   timerDisplay.innerText = timeLeft;
-}, 1000)
+
+
+  if(timeLeft === 0){
+    clearInterval(timer);
+    clearInterval(bugMovement);
+    removeBug();
+    showAlert(`GAME OVER! Hai fatto ${score} punti!`)
+  }
+}
+
+
+
 
 
 
