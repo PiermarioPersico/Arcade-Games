@@ -7,7 +7,7 @@ scoreDisplay.innerText = score;
 
 // inseriamo il tempo iniziale
 const timerDisplay = document.querySelector('#timer-display');
-let timeLeft = 5;
+let timeLeft = 30;
 timerDisplay.innerText = timeLeft;
 
 
@@ -23,6 +23,9 @@ let bugSpeed = 800; //millisecondi
 function randomBug (){
 
   removeBug();
+
+
+
   const randomNumber = Math.floor(Math.random() * cells.length);
   const cell = cells[randomNumber];
   cell.classList.add('bug');
@@ -59,6 +62,12 @@ for(let i = 0; i < cells.length; i++){
     }
   })
 }
+
+if(score > 5){
+  bugSpeed = bugSpeed - 600;
+}
+
+
 
 //conto alla rovescia
 const timer = setInterval(countDown, 1000)
