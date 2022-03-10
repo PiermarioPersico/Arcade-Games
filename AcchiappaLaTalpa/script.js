@@ -14,14 +14,25 @@ timerDisplay.innerText = timeLeft;
 //inseriamo il bug via JS
 const cells = document.querySelectorAll('.cell');
 
+
 //Math.random restituisce un numero da 0 a 1 mentre Math.floor lo semplifica per difetto.in questo caso otteniamo un numero tra 0 e 8
-const randomNumber = Math.floor(Math.random() * 9);
-const cell = cells[randomNumber];
+function randomBug (){
 
-cell.classList.add('bug');
+  removeBug();
+  const randomNumber = Math.floor(Math.random() * cells.length);
+  const cell = cells[randomNumber];
+  cell.classList.add('bug');
+}
 
+const bugMovement = setInterval(randomBug, 800);
 
+function removeBug(){
+  for(i = 0; i < cells.length; i++){
+    const cellToClean = cells[i];
 
+    cellToClean.classList.remove('bug');
+  }
+}
 
 
 
