@@ -70,14 +70,13 @@ function checkVictory(){
 
 }
 
-
+// ALLERT
 function showAlert(message){
 
   const gameArea = document.querySelector('.game-area')
   const alertMessage = `
   <div class="game-alert">
-    <div class="game-alert-message">${message}  <div class="game-alert-regame"><a href="index.html">RIGIOCA</a><a href="../index.html">HOME</a></div></div>
-
+    <div class="game-alert-message">${message}<div class="game-alert-regame"><a href="index.html">RIGIOCA</a><a href="../index.html">HOME</a></div></div>
   </div>`
 
   gameArea.innerHTML = gameArea.innerHTML + alertMessage;
