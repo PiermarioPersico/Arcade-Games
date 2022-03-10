@@ -61,6 +61,11 @@ for(let i = 0; i < cells.length; i++){
 }
 
 
+const timer = setInterval(function(){
+  timeLeft--;
+  timerDisplay.innerText = timeLeft;
+}, 1000)
+
 
 
 
