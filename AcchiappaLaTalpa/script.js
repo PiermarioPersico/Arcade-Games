@@ -14,6 +14,10 @@ timerDisplay.innerText = timeLeft;
 //inseriamo il bug via JS
 const cells = document.querySelectorAll('.cell');
 
+//diamo un valore di velocità iniziale
+
+let bugSpeed = 800; //millisecondi
+
 
 //Math.random restituisce un numero da 0 a 1 mentre Math.floor lo semplifica per difetto.in questo caso otteniamo un numero tra 0 e 8
 function randomBug (){
@@ -24,17 +28,29 @@ function randomBug (){
   cell.classList.add('bug');
 }
 
-const bugMovement = setInterval(randomBug, 800);
+const bugMovement = setInterval(randomBug, bugSpeed);
 
+
+//funzione per pulire le celle prima di inserire un altro bug
 function removeBug(){
   for(i = 0; i < cells.length; i++){
     const cellToClean = cells[i];
-
     cellToClean.classList.remove('bug');
   }
 }
 
+//facciamo colpire il bug dall'utente
+for(let i = 0; i < cells.length; i++){
+  const cell = cells[i];
 
+  cell.addEventListener('click', function(){
+    if(cell.classList.contains('bug')){
+      score++;
+      scoreDisplay.innerText = score;
+      console.log(score);
+    }
+  })
+}
 
 
 
