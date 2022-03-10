@@ -77,7 +77,7 @@ function countDown(){
     clearInterval(timer);
     clearInterval(bugMovement);
     removeBug();
-    showAlert(`GAME OVER! Hai fatto ${score} punti!`)
+    showAlert(`FINE PARTITA! Hai fatto ${score} punti!`)
   }
 }
 
