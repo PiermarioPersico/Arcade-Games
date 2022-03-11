@@ -18,12 +18,11 @@ const cells = document.querySelectorAll('.cell');
 
 let bugSpeed = 800; //millisecondi
 
+
 //Math.random restituisce un numero da 0 a 1 mentre Math.floor lo semplifica per difetto.in questo caso otteniamo un numero tra 0 e 8
 function randomBug (){
 
   removeBug();
-
-
 
   const randomNumber = Math.floor(Math.random() * cells.length);
   const cell = cells[randomNumber];
