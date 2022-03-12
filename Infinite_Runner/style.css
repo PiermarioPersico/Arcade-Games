@@ -1,5 +1,5 @@
 :root{
-  --cell-size: 80px;
+  --cell-size: 75px;
   --cell-gutter:20px;
 }
 *{
