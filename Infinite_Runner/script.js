@@ -13,13 +13,14 @@ duck.classList.add('duck');
 
 
 function jump(event){
-  if( event.code === 'Space' && !event.repeat ){
-
+  if( (event.code === 'Space' || event.type === 'click') && !event.repeat ){
+    console.log(event)
+    duck.classList.add('duck-jump');
+    setTimeout(function(){
+      duck.classList.remove('duck-jump');
+    }, 300);
   }
-  duck.classList.add('duck-jump');
-  setTimeout(function(){
-    duck.classList.remove('duck-jump');
-  }, 300);
 };
 
 document.addEventListener('click', jump);
+document.addEventListener('keydown', jump);
