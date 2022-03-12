@@ -140,6 +140,9 @@ main p{
    background-position:center;
 }
 
+.duck-jump{
+  transform: translate(0, -120%);
+}
 
 
 
