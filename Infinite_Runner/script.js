@@ -1,10 +1,10 @@
 const road = document.querySelectorAll('#grid > div');
 console.log(road);
 
-for( let i = 0; i < road.length; i++){
-
-  road[i].innerText = i;
-}
+// for( let i = 0; i < road.length; i++){
+//
+//   road[i].innerText = i;
+// }
 
 // Conservo in variabile i riferimenti alla papera
 const duckIdx = 1;
@@ -27,6 +27,16 @@ function addPlant(){
       addPlant();
       return;
     }
+
+    if(currentPlantIdx === duckIdx && !road[currentPlantIdx].classList.contains('duck-jump')){
+       showAlert('Crash!')
+       clearInterval(plantInterval);
+       road[currentPlantIdx].classList.remove('duck');
+       road[currentPlantIdx].classList.add('plant');
+
+       return;
+    }
+
     road[currentPlantIdx].classList.add('plant');
   }, 700)
 }
@@ -50,3 +60,21 @@ function jump(event){
 
 document.addEventListener('click', jump);
 document.addEventListener('keydown', jump);
+
+
+
+
+
+
+
+// ALLERT
+function showAlert(message){
+
+  const gameArea = document.querySelector('.game-area')
+  const alertMessage = `
+  <div class="game-alert">
+    <div class="game-alert-message">${message}<img class="winning-gif" src="../common/7561.gif" alt=""><div class="game-alert-regame"><a href="index.html">RIGIOCA</a><a href="../index.html">HOME</a></div></div>
+  </div>`
+
+  gameArea.innerHTML = gameArea.innerHTML + alertMessage;
+}
