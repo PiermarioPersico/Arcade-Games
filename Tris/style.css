@@ -104,8 +104,7 @@ padding: 15px;
 .game-data h2{
   font-size: 50px;
   margin-bottom: 15px;
-  text-decoration: underline;
-  text-decoration-color: black;
+  color: red;
 }
 .game-data p{
   font-size: 30px;

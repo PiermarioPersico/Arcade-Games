@@ -116,7 +116,10 @@ main p{
   width: calc(var(--cell-size)*10);
   height: 400px;
   border-bottom: 4px solid white;
-
+  background: linear-gradient(90deg,rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2) ), url('images/gotham.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position:center;
   display: flex;
   align-items: flex-end;
 }
@@ -124,11 +127,13 @@ main p{
   height: var(--cell-size);
   width:var(--cell-size);
   cursor: pointer;
+
 }
 
 /* INFINITE RUNNER */
+
 .duck{
-   background-image: url('images/duck.png');
+   background-image: url('images/bat.png');
    background-repeat: no-repeat;
    background-size: contain;
    background-position:center;
@@ -138,6 +143,7 @@ main p{
    background-repeat: no-repeat;
    background-size: contain;
    background-position:center;
+   transform: scaleX(-1);
 }
 
 .duck-jump{
