@@ -31,9 +31,9 @@ for(let i = 0 ; i < cells.length ; i++){
     let hasWon = checkVictory();
 
     if(hasWon){
-      showAlert(`${sign} ha vinto!`)
+      showAlertWinning(`${sign} ha vinto!`)
     } else if(turn === 9) {
-      showAlert("pareggio")
+      showAlertDraw("pareggio")
     }
   })
 }
@@ -71,12 +71,23 @@ function checkVictory(){
 }
 
 // ALLERT
-function showAlert(message){
+function showAlertWinning(message){
 
   const gameArea = document.querySelector('.game-area')
   const alertMessage = `
   <div class="game-alert">
-    <div class="game-alert-message">${message}<div class="game-alert-regame"><a href="index.html">RIGIOCA</a><a href="../index.html">HOME</a></div></div>
+    <div class="game-alert-message">${message}<img class="winning-gif" src="../common/7561.gif" alt=""><div class="game-alert-regame"><a href="index.html">RIGIOCA</a><a href="../index.html">HOME</a></div></div>
+  </div>`
+
+  gameArea.innerHTML = gameArea.innerHTML + alertMessage;
+}
+
+function showAlertDraw(message){
+
+  const gameArea = document.querySelector('.game-area')
+  const alertMessage = `
+  <div class="game-alert">
+    <div class="game-alert-message">${message}<img class="winning-gif" src="../common/giphy.gif" alt=""><div class="game-alert-regame"><a href="index.html">RIGIOCA</a><a href="../index.html">HOME</a></div></div>
   </div>`
 
   gameArea.innerHTML = gameArea.innerHTML + alertMessage;

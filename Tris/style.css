@@ -5,7 +5,7 @@
 *{
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Press Start 2P';
+  font-family: 'Bangers', cursive;
   color: white;
 }
 body{
@@ -159,10 +159,13 @@ padding: 15px;
   font-size: 50px;
 }
 .game-alert-message{
-  background-color: rgba(0, 0, 255, 0.8);
+  background-color: #2271b3;
   border: 4px solid white;
   padding: 20px;
   border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .game-alert-regame{
@@ -179,4 +182,10 @@ padding: 15px;
 }
 .game-alert-regame a:hover{
   color: black;
+}
+
+.winning-gif{
+  margin: 20px;
+  height: 50%;
+  width: 50%;
 }
