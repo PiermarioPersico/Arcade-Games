@@ -208,10 +208,19 @@ main{
   margin: 10px;
 }
 .game-data p{
-  font-size: 60px;
+  font-size: 50px;
 }
 .game-data h2{
   font-size: 80px;
 }
-
+.winning-gif{
+  height: 80%;
+  width: 80%;
+}
+.game-alert-message{
+font-size: 80px;
+}
+.game-alert-regame a{
+ font-size: 50px;
+}
 }
