@@ -7,6 +7,7 @@
   box-sizing: border-box;
   font-family: 'Bangers', cursive;
   color: white;
+  text-shadow: 1px 1px black;
 }
 body{
   background-image: url("../common/arcadewall.jpg");
@@ -31,7 +32,7 @@ nav{
     align-items: center;
    }
    #first-link:hover{
-     color: black;
+     text-shadow: 1px 1px black;
    }
 header{
   margin: 30px auto auto auto;
@@ -54,6 +55,7 @@ nav a{
   border-top: none;
   background-color: #2271b3;
   padding: 20px;
+
 }
 
 nav a:hover{
