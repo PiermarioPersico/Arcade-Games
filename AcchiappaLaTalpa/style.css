@@ -7,6 +7,7 @@
   box-sizing: border-box;
   font-family: 'Bangers', cursive;
   color: white;
+  text-shadow: 1px 1px black;
 }
 body{
   background-image: url("../common/arcadewall.jpg");
@@ -31,12 +32,12 @@ nav{
     align-items: center;
    }
    #first-link:hover{
-     color: black;
+     text-decoration: underline;
    }
 header{
   margin: 30px auto auto auto;
   background-color:rgba(34, 113, 179, 0.8);
-    border: 4px solid white;
+  border: 4px solid white;
   border-radius: 20px;
   width: 80%;
   padding: 0px 40px 40px 40px;
@@ -50,6 +51,7 @@ header{
 nav a{
   text-decoration: none;
   border: 4px solid white;
+  font-size: 20px;
   border-top: none;
   background-color: #2271b3;
   padding: 20px;
@@ -73,6 +75,7 @@ main{
   width: 80%;
   margin: auto;
   margin-top: 5%;
+  border: 4px solid white;
 }
 
 main p{
@@ -106,8 +109,7 @@ position: relative;
 .game-data h2{
   font-size: 50px;
   margin-bottom: 15px;
-  text-decoration: underline;
-  text-decoration-color: black;
+  color: red;
 }
 .game-data p{
   font-size: 30px;
@@ -146,6 +148,11 @@ position: relative;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+
+}
+.scores h3,
+.scores span{
+  font-family: 'Bebas Neue', cursive;
 }
 
 /* ACCHIAPPA LA TALPA */
@@ -197,15 +204,37 @@ position: relative;
 
 
 
-@media only screen and (min-width:1200px) {
+@media only screen and (max-width:1200px) {
 
-  .game-area{
-  position: relative;
-  display: flex;
-  flex-direction: row;
+  nav a{
+    font-size: 45px;
   }
-
-  .scores{
-    margin: 20px;
+  header{
+   width: auto;
+   margin: 10px;
+  }
+  main{
+    width: auto;
+    margin: 10px;
+  }
+  .game-data p{
+    font-size: 50px;
+  }
+  .game-data h2{
+    font-size: 80px;
+  }
+  .winning-gif{
+    height: 80%;
+    width: 80%;
+  }
+  .game-alert-message{
+  font-size: 80px;
+  }
+  .game-alert-regame a{
+   font-size: 50px;
+  }
+  .scores h3,
+  .scores span{
+    font-size: 50px;
   }
 }
