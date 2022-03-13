@@ -15,7 +15,7 @@ body{
 }
 nav{
   border-radius: 20px;
-  margin: 0px auto 20px auto;
+  margin: 0px auto 0px auto;
   display: flex;
   justify-content: center;
 }
@@ -74,6 +74,10 @@ nav a:hover{
   background-color: white;
   color: #2271b3;
   text-shadow:none;
+}
+.link-space{
+  position: relative;
+  margin-bottom: 30px;
 }
 header h1{
   font-size: 70px;
