@@ -116,7 +116,7 @@ main p{
   width: calc(var(--cell-size)*10);
   height: 400px;
   border-bottom: 4px solid white;
-  background: linear-gradient(90deg,rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2) ), url('images/gotham.jpg');
+  background: linear-gradient(90deg,rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3) ), url('images/gotham.jpg');
   background-repeat: no-repeat;
   background-size: contain;
   background-position:center;
