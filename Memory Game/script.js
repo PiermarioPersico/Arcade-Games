@@ -81,18 +81,79 @@ function checkForWin(){
 
   const flippedCards = document.querySelectorAll('.flipped');
   if(flippedCards.length === deck.length){
-    console.log('hai vinto!');
-    showAlert(`Hai vinto in ${errors} Mosse!`);
+    if(errors === 6 ){
+      showAlertFirst(`Hai vinto in ${errors} Mosse! PARTITA PERFETTAA!`);
+    } else if(errors < 10){
+      showAlertSecond(`Hai vinto in ${errors} Mosse! Ad un passo dalla perfezione!`);
+    } else if( errors < 15){
+      showAlertThird(`Hai vinto in ${errors} Mosse! Buona partita!`);
+    }else if( errors < 20){
+      showAlertFourth(`Hai vinto in ${errors} Mosse! Puoi fare di meglio!`);
+    }else if( errors < 25){
+      showAlertFifth(`Hai vinto in ${errors} Mosse! Impegnati di più!`);
+    }else{
+      showAlertLast(`Hai vinto in ${errors} Mosse! Se le sceglievi a caso facevi prima!`);
+    }
   }
 
 }
 
 
-function showAlert(message){
+function showAlertFirst(message){
   const gameArea = document.querySelector('.game-area')
   const alertMessage = `
   <div class="game-alert">
-    <div class="game-alert-message">${message}<div class="game-alert-regame"><a href="index.html">RIGIOCA</a><a href="../index.html">HOME</a></div></div>
+    <div class="game-alert-message">${message}<div class="game-alert-regame"><img class="image-winning" src="images/perfect.gif" alt=""><a href="index.html">RIGIOCA</a><a href="../index.html">HOME</a></div></div>
+  </div>`
+
+  gameArea.innerHTML = gameArea.innerHTML + alertMessage;
+}
+
+function showAlertSecond(message){
+  const gameArea = document.querySelector('.game-area')
+  const alertMessage = `
+  <div class="game-alert">
+    <div class="game-alert-message">${message}<div class="game-alert-regame"><img src="images/second.gif" alt=""><a href="index.html">RIGIOCA</a><a href="../index.html">HOME</a></div></div>
+  </div>`
+
+  gameArea.innerHTML = gameArea.innerHTML + alertMessage;
+}
+
+function showAlertThird(message){
+  const gameArea = document.querySelector('.game-area')
+  const alertMessage = `
+  <div class="game-alert">
+    <div class="game-alert-message">${message}<div class="game-alert-regame"><img src="images/third.gif" alt=""><a href="index.html">RIGIOCA</a><a href="../index.html">HOME</a></div></div>
+  </div>`
+
+  gameArea.innerHTML = gameArea.innerHTML + alertMessage;
+}
+
+function showAlertFourth(message){
+  const gameArea = document.querySelector('.game-area')
+  const alertMessage = `
+  <div class="game-alert">
+    <div class="game-alert-message">${message}<div class="game-alert-regame"><img src="images/forth.gif" alt=""><a href="index.html">RIGIOCA</a><a href="../index.html">HOME</a></div></div>
+  </div>`
+
+  gameArea.innerHTML = gameArea.innerHTML + alertMessage;
+}
+
+function showAlertFifth(message){
+  const gameArea = document.querySelector('.game-area')
+  const alertMessage = `
+  <div class="game-alert">
+    <div class="game-alert-message">${message}<div class="game-alert-regame"><img src="images/five.gif" alt=""><a href="index.html">RIGIOCA</a><a href="../index.html">HOME</a></div></div>
+  </div>`
+
+  gameArea.innerHTML = gameArea.innerHTML + alertMessage;
+}
+
+function showAlertLast(message){
+  const gameArea = document.querySelector('.game-area')
+  const alertMessage = `
+  <div class="game-alert">
+    <div class="game-alert-message">${message}<div class="game-alert-regame"><img src="images/last.gif" alt=""><a href="index.html">RIGIOCA</a><a href="../index.html">HOME</a></div></div>
   </div>`
 
   gameArea.innerHTML = gameArea.innerHTML + alertMessage;
