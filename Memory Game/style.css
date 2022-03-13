@@ -160,8 +160,10 @@ padding: 15px;
 }
 
 
-#error{
+#error,
+main h3{
   font-family: 'Bebas Neue', cursive;
+  font-size: 50px;
 }
 
 
