@@ -15,7 +15,7 @@ let score = 0;
 function addPlant(){
 
   let currentPlantIdx = road.length - 1;
-  // road[currentPlantIdx].classList.add('plant');
+  road[currentPlantIdx].classList.add('plant');
 
   // if(currentPlantIdx === 1){
   //   road[currentPlantIdx].classList.remove('plant');
@@ -29,7 +29,7 @@ function addPlant(){
     scoreEl.innerText = score;
 
     if(score % 20 === 0){
-      speed = speed - 20;
+      speed = speed - 25;
     }
 
 
