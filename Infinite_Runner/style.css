@@ -165,7 +165,7 @@ main p{
    background-position:center;
 
  /* per dopo */
-   /* transform: scale(1.4); */
+   transform: scale(1.4);
 }
 
 .duck-jump{
