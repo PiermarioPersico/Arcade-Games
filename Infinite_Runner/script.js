@@ -55,15 +55,18 @@ function addPlant(){
        road[currentPlantIdx].classList.add('plant');
        clearInterval(plantInterval);
 
-       if(score < 20){
+       if(score < 50){
          showAlertOne('Ci vuole più allenamento!');
-       } else if(score < 50){
+       } else if(score > 50 && score < 100){
          showAlertTwo('I risultati del lavoro si iniziano a vedere!');
-       } else if(score < 100){
+       } else if(score > 100 && score < 200){
          showAlertThree('Non si scherza con Batman!');
-       }else {
+       }else if( score > 200 && score < 300){
          showAlertFour('Io sono Vendetta!');
+       }else{
+         showAlertLast('Io sono Batman!');
        }
+
 
 
 
@@ -140,6 +143,17 @@ function showAlertFour(message){
   const alertMessage = `
   <div class="game-alert">
     <div class="game-alert-message"><p>Punteggio:${score}</p>${message}<img class="winning-gif" src="../common/batmanFour.gif" alt=""><div class="game-alert-regame"><a href="index.html">RIGIOCA</a><a href="../index.html">HOME</a></div></div>
+  </div>`
+
+  gameArea.innerHTML = gameArea.innerHTML + alertMessage;
+}
+
+function showAlertLast(message){
+
+  const gameArea = document.querySelector('.game-area')
+  const alertMessage = `
+  <div class="game-alert">
+    <div class="game-alert-message"><p>Punteggio:${score}</p>${message}<img class="winning-gif" src="../common/batmanLast.gif" alt=""><div class="game-alert-regame"><a href="index.html">RIGIOCA</a><a href="../index.html">HOME</a></div></div>
   </div>`
 
   gameArea.innerHTML = gameArea.innerHTML + alertMessage;
