@@ -15,7 +15,7 @@ let score = 0;
 function addPlant(){
 
   let currentPlantIdx = road.length - 1;
-  road[currentPlantIdx].classList.add('plant');
+  // road[currentPlantIdx].classList.add('plant');
 
   // if(currentPlantIdx === 1){
   //   road[currentPlantIdx].classList.remove('plant');
@@ -34,7 +34,7 @@ function addPlant(){
 
 
 
-    road[currentPlantIdx].classList.remove('plant');
+    road[currentPlantIdx].classList.remove('plant')
     currentPlantIdx--;
 
     if(currentPlantIdx < 0){
@@ -49,10 +49,10 @@ function addPlant(){
     // e la classe `duck-jump` non è presente
     // vuol dire che la papera ha saltato nel momento sbaglato
     // e si è schiantata
+
     if(currentPlantIdx === duckIdx && !road[currentPlantIdx].classList.contains('duck-jump')){
 
-       road[currentPlantIdx].classList.remove('duck');
-       road[currentPlantIdx].classList.add('plant');
+
        clearInterval(plantInterval);
 
        if(score < 50){
@@ -67,13 +67,13 @@ function addPlant(){
          showAlertLast('Io sono Batman!');
        }
 
-
-
-
        return;
     }
 
     road[currentPlantIdx].classList.add('plant');
+    if(currentPlantIdx === duckIdx ){
+       road[currentPlantIdx].classList.remove('plant');
+    }
   }, speed)
 }
 
@@ -83,12 +83,13 @@ function addPlant(){
 
 
 
-
 function jump(event){
   if( (event.code === 'Space' || event.type === 'click') && !event.repeat ){
-    duck.classList.remove('plant');
+
     duck.classList.add('duck-jump');
     setTimeout(function(){
+
+
       duck.classList.remove('duck-jump');
     }, 300);
   }
