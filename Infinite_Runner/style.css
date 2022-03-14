@@ -26,14 +26,12 @@ nav{
   border-bottom-right-radius: 20px }
 #first-link{
     border-bottom-left-radius: 20px;
-    background-color: white;
-    color: #2271b3;
-    display: flex;
-    align-items: center;
    }
-   #first-link:hover{
-     text-decoration: underline;
-   }
+#chosen-game{
+        background-color: white;
+        color:#2271b3;
+        text-shadow: none;
+      }
 header{
   margin: 30px auto auto auto;
   background-color:rgba(34, 113, 179, 0.8);
@@ -60,6 +58,7 @@ nav a{
 nav a:hover{
   color:#2271b3;
   background-color: white;
+  text-shadow: none;
 }
 header h1{
   font-size: 70px;

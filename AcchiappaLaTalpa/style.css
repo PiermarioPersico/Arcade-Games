@@ -26,14 +26,12 @@ nav{
   border-bottom-right-radius: 20px }
 #first-link{
     border-bottom-left-radius: 20px;
-    background-color: white;
-    color: #2271b3;
-    display: flex;
-    align-items: center;
    }
-   #first-link:hover{
-     text-decoration: underline;
-   }
+#chosen-game{
+        background-color: white;
+        color:#2271b3;
+        text-shadow: none;
+      }
 header{
   margin: 30px auto auto auto;
   background-color:rgba(34, 113, 179, 0.8);
@@ -60,12 +58,30 @@ nav a{
 nav a:hover{
   color:#2271b3;
   background-color: white;
+  text-shadow: none;
 }
 header h1{
   font-size: 70px;
   line-height: 200px;
   text-align: center;
   margin-left: 20PX;
+}
+#home-link{
+  position: absolute;
+  border: 4px solid white;
+  border-top: none;
+  border-radius: 0px 0px 20px 20px;
+  padding: 20px;
+  text-decoration: none;
+}
+#home-link:hover{
+  background-color: white;
+  color: #2271b3;
+  text-shadow:none;
+}
+.link-space{
+  position: relative;
+  margin-bottom: 30px;
 }
 main{
   text-align: center;
@@ -211,6 +227,9 @@ display: flex;
 
   nav a{
     font-size: 45px;
+  }
+  #home-link{
+    display: none;
   }
   header{
    width: auto;
