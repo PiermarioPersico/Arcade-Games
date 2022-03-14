@@ -142,9 +142,6 @@ padding: 15px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-
-  background-image: linear-gradient(319deg, #bbff99 0%, #ffec99 37%, #ff9999 100%);
-
 }
 
 .cell{
@@ -152,6 +149,7 @@ padding: 15px;
   width:var(--cell-size);
   cursor: pointer;
   background-color: #2271b3;
+  border: 2px solid black;
 
   font-size: 150px;
   font-family: 'Indie Flower';
