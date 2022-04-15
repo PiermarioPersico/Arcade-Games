@@ -1,6 +1,7 @@
 :root{
-  --cell-size: 180px;
-  --cell-gutter:20px;
+  --cell-size: 40px;
+  --grid-size: 15;
+
 }
 *{
   margin: 0;
@@ -134,29 +135,39 @@ padding: 15px;
 
 /* GRIGLIA GIOCO */
 #grid{
-  width: calc((var(--cell-size) + var(--cell-gutter))*3);
-  height: calc((var(--cell-size) + var(--cell-gutter))*3);
-  align-content: space-between;
-  justify-content: space-between;
+  width: calc(var(--cell-size) * var(--grid-size));
+  height: calc(var(--cell-size) * var(--grid-size));
+
 
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
 }
 
-.cell{
+#grid > div{
+  width: var(--cell-size);
   height: var(--cell-size);
-  width:var(--cell-size);
-  cursor: pointer;
-  background-color: #2271b3;
-  border: 2px solid black;
-
-  font-size: 150px;
-  font-family: 'Indie Flower';
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  border: 1px solid black;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
+
+.alien{
+  background-image: url('images/alien.png');
+}
+
+.spaceship{
+  background-image: url('images/spaceship.png');
+}
+
+.laser{
+  background-image: url('images/laser.png');
+}
+
+.boom{
+  background-image: url('images/boom.png');
+}
+
 
 
 /* ALERT */

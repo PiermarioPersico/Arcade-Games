@@ -139,12 +139,12 @@ main p{
   background-position:center;
   display: flex;
   align-items: flex-end;
+
 }
 #grid > div{
   height: var(--cell-size);
   width:var(--cell-size);
   cursor: pointer;
-
 }
 
 /* INFINITE RUNNER */
